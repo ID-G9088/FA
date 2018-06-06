@@ -20,7 +20,7 @@ ul {margin:0;
 a {text-decoration:none;}
 
 .header {
-  min-height:500px;
+  min-height:550px;
 }
 
 h1 {margin-bottom:0px;}
@@ -43,7 +43,7 @@ h1 {margin-bottom:0px;}
   bottom: 0;
   left: 0;
   right: 0;
-  height:500px;
+  height:550px;
 
 
     outline: 1px solid black;
@@ -156,31 +156,55 @@ line-height: 0;
 a.button {
   display:block;
   text-align:center;
-  width:240px;
-  height:50px;
-  background-color: #fb565a;
-  border-radius: 4px;
+  width:350px;
+  height:70px;
+  background-color: #222 ;
+  border-radius: 5px;
   color:white;
-  line-height: 50px;
-  margin-bottom: 15px;
+  line-height: 80px;
+  width:350px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:white;
+
 }
 
 a.button:hover {
-  background:#e74246;
+  background:black;
+  color:white;
+  font-size: 20px;
+  opacity:0.75;
 }
 
 a.button:active {
-  background:#d7373b;
+  background: black;
+  opacity:1;
 }
 
 .main {padding-top: 30px;
+  background: black url('../img/6.jpg') ;
+}
+
+.gallery::before {content: '';
+display: block;
+background: white url('../img/5.png') no-repeat center center;
+height: 50px;
+width:1100px;
+margin-bottom: 40px;}
+
+ .title-gallery {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 46px;
+  font-family: 'Monotype Corsiva', cursive;
+  color:white;
 }
 
 .services-main {
   float:left;
-  width:300px;
-  min-height:350px;
-  margin-right:100px;
+  width:350px;
+  min-height:500px;
+  margin-right:25px;
   background-color: #F0FFF0;
   box-shadow:  0 0 20px rgba(0,0,0,0.44);
   border-radius: 5px;
@@ -196,7 +220,7 @@ a.button:active {
 
 
 .services {padding-bottom:60px;
-    border-bottom: 2px solid #D3D3D3;
+
 }
 
 .services-main:last-child {float:right;
@@ -210,13 +234,14 @@ margin-bottom:30px;
 }
 
 .services-main .button {
-  width:160px;
-  text-transform: uppercase;
+
 }
 
 .service-description {
   text-align: left;
-  margin-bottom:40px;}
+  margin-bottom:180px;
+  min-height: 35px;
+}
 
 
 
@@ -224,9 +249,7 @@ margin-bottom:30px;
 display: table;
   clear:both;}
 
-a.green {
-    background-color:#00ca74;
-  }
+
 
 a.green:hover {background-color:#00bc6c;}
 
@@ -235,9 +258,7 @@ a.green:active  {
   }
 
 
-a.yellow {
-  background-color:#efc84a;
-}
+
 
 a.yellow:hover {background-color:#eab534;}
 
@@ -283,8 +304,6 @@ margin-bottom:60px;}
 
 
 
-  .logo-2004 {line-height: 0;
-    margin-bottom:40px;}
 
 
 
