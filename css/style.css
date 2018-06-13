@@ -20,7 +20,7 @@ ul {margin:0;
 a {text-decoration:none;}
 
 .header {
-  min-height:550px;
+  min-height:950px;
 }
 
 h1 {margin-bottom:0px;}
@@ -43,7 +43,7 @@ h1 {margin-bottom:0px;}
   bottom: 0;
   left: 0;
   right: 0;
-  height:550px;
+  height:950px;
   outline: 1px solid black;
   }
 
@@ -78,11 +78,12 @@ font-size:16px;
 }
 
 .navigation a {
+  font-size: 20px;
   line-height: 50px;
     color:white;
   font-weight: bold;
   padding:20px;
-
+transition: 0.25s;
 }
 
 .navigation a:hover {
@@ -119,16 +120,13 @@ position:relative;
 
 
 .navigation li:hover {
-
   border-radius:5px;
 }
 
 .about-us {
-
-  margin-right: 50px;
+  margin-right: 150px;
   width:390px;
-float: right;
-
+  float: right;
   margin-top: 50px;
   font-size: 26px;
 
@@ -142,17 +140,16 @@ float: right;
 margin-right:0px;
 line-height: 0;
 cursor: pointer;
-
 }
 
 .gallery img:hover
 {border-radius: 10px;
   -webkit-transform: scale(2,2);
-    -webkit-transition-timing-function: easy-out;
-    -webkit-transition-duration: 350ms;
-    -moz-transform: scale(2,2);
-    -moz-transition-timing-function: ease-out;
-    -moz-transition-duration: 350ms;
+  -webkit-transition-timing-function: easy-out;
+  -webkit-transition-duration: 350ms;
+  -moz-transform: scale(2,2);
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-duration: 350ms;
 }
 
 
@@ -254,7 +251,7 @@ a.button:active {
 }
 
 .main {padding-top: 30px;
-
+background-color: #F0FFFF;
 
 }
 
@@ -419,8 +416,9 @@ margin-bottom:60px;}
 
 .social-big
 {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   padding: 0 50px;
+  border-bottom: 1px solid black;
 }
 
 .social-big::before {content: '';
@@ -437,12 +435,16 @@ margin-bottom: 20px;}
   width:200px;
   height: 185px;
   margin-right: 195px;
+  margin-bottom: 45px;
 }
 
 .social-btn-big:hover {
   background-color: black;
   border-radius: 50%;
-}
+  transform: rotate(360deg) scale(1.1);
+  -webkit-transform: rotate(360deg) scale(1.1);
+  transition: 0.5s;
+  }
 
 .social-btn-big:focus {
 outline: none;
@@ -453,68 +455,69 @@ outline: none;
 }
 
 .vk-big {
-  background-position: -260px -30px;
+  background-position: -260px -35px;
 }
 
 .whatsapp-big
 {
-  background-position: -37px -30px ;
+  background-position: -37px -35px ;
 }
 
 .insta-big{
-  background-position: -33px -230px ;
+background-position: -33px -235px ;
+
 }
 
-.social {
+.timetable {
   float:left;
- min-width:300px;
+font-size:16px;
   margin-left:100px;
 padding-top:5px;
+color:white;
+line-height: 1.5;
 }
 
-.social a {display:inline-block;
-  }
-
-  .social-btn:hover {
-    background-color:#e74246;
-  }
-
-  .social-btn:active {
-    background-color:#d7373b;
-  }
-
-.social .social-btn {
-font-size:0px;
-background: rgba(0, 0, 0, 0.8) url("../img/social.png") no-repeat center;
-vertical-align: top;
-width:75px;
-height:75px;
-border-radius: 50%;
+.title-timetable {
+  font-size: 22px;
+  font-weight: bold;
 }
 
-.social-btn:hover {
-  background-color:#e74246;
-}
-
-.social-btn:active {
-  background-color:#d7373b;
+.mobile, .popup-mobile { position: relative;
+  color:white;
+  padding-left:25px;
+  font-size: 20px;
 }
 
 
-.social .vk {background-position: 25px -140px;
+.mobile-logo, .popup-mobile-logo
+{ position: absolute;
+  background:  url('../img/mobile.png') no-repeat center;
+  width:20px;
+  height:20px;
+background-size: cover;
+top:5px;
+left:0px;
+}
+
+.chat
+{
+  position:fixed;
+  background:  url('../img/mobile.png') no-repeat center;
+  background-size: cover;
+    width:30px;
+  height:30px;
+bottom: 5px;
+right:5px;
 
 }
 
 
 
-.social .fb {background-position: 25px 25px;
-  background-color: red;
-}
 
 
-.social .insta {background-position:25px -60px;
-  background-color: red;
-}
+
+
+
 
 
 
@@ -524,8 +527,9 @@ footer { padding: 20px 0;
  }
 
 .footer-info {width:500px;
-  float:left;
+  float:right;
   margin-left:130px;
+  color:white;
 }
 
 
@@ -654,89 +658,91 @@ padding-right: 75px;}
     }
 
 
+.title-map
+{
+  text-align: center;
+  background-color: black;
+  font-size: 22px;
+  color:white;
+}
+
 
 .popup-contact {display: none ;
-  position:absolute;
-    left:50%;
-  margin-left:-480px;
+  position:fixed;
+  left:50%;
+  margin-left:-280px;
   top:275px;
-  width:760px;
-  height:430px;
-  background:white;
+  width:450px;
+  height:250px;
+  background: url('../img/6.jpg') repeat ;
   padding: 75px 100px 85px;
   box-shadow: 0px 30px 50px rgba(0,0,0, 0.7);
-  color:black;
+  z-index: 999;
+  border-radius: 10px;
+  color:red;
 }
+
+
 
 .popup-contact-show {
   display:block;
-  -webkit-animation: swing 0.6s;
-  animation: swing 1s;
+  -webkit-animation: slideInDown 1s;
+  animation: slideInDown 1s;
+
 }
 
-@-webkit-keyframes swing {
-  20% {
-    -webkit-transform: rotate3d(0, 0, 1, 15deg);
-    transform: rotate3d(0, 0, 1, 15deg);
-  }
+.popup-contact .title-timetable {
 
-  40% {
-    -webkit-transform: rotate3d(0, 0, 1, -10deg);
-    transform: rotate3d(0, 0, 1, -10deg);
-  }
+}
 
-  60% {
-    -webkit-transform: rotate3d(0, 0, 1, 5deg);
-    transform: rotate3d(0, 0, 1, 5deg);
-  }
+.popup-contact .mobile
+{
+  color:red;
+}
 
-  80% {
-    -webkit-transform: rotate3d(0, 0, 1, -5deg);
-    transform: rotate3d(0, 0, 1, -5deg);
+
+
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
   }
 
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-@keyframes swing {
-  20% {
-    -webkit-transform: rotate3d(0, 0, 1, 15deg);
-    transform: rotate3d(0, 0, 1, 15deg);
-  }
-
-  40% {
-    -webkit-transform: rotate3d(0, 0, 1, -10deg);
-    transform: rotate3d(0, 0, 1, -10deg);
-  }
-
-  60% {
-    -webkit-transform: rotate3d(0, 0, 1, 5deg);
-    transform: rotate3d(0, 0, 1, 5deg);
-  }
-
-  80% {
-    -webkit-transform: rotate3d(0, 0, 1, -5deg);
-    transform: rotate3d(0, 0, 1, -5deg);
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
   }
 
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
+}
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
 }
 
 
 
 .popup-contact-close {position:absolute;
-    right:70px;;
+    right:30px;
+    top:40px;
     width:21px;
     height:21px;
     cursor:pointer;
   font-size: 0px;
-  background: white url("../img/cross.png")  center;
+  background:  url("../img/cross.png")  center;
 
 
 }
