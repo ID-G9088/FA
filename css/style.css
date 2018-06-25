@@ -609,7 +609,10 @@ footer { padding: 20px 0;
 
 
 
-
+.mobile a
+{color:red;
+text-decoration: underline;
+}
 
 
 
