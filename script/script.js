@@ -25,3 +25,28 @@ window.addEventListener("keydown", function (event) {
     }
   }
 });
+
+
+$(document).ready(function(){
+	// появление/затухание кнопки #back-top
+	$(function (){
+		// прячем кнопку #back-top
+		$("#to-top").hide();
+
+		$(window).scroll(function (){
+			if ($(this).scrollTop() > 600){
+				$("#to-top").fadeIn();
+			} else{
+				$("#to-top").fadeOut();
+			}
+		});
+
+		// при клике на ссылку плавно поднимаемся вверх
+		$("#to-top").click(function (){
+			$("body,html").animate({
+				scrollTop:0
+			}, 750);
+			return false;
+		});
+	});
+});
