@@ -739,11 +739,14 @@ margin-bottom: 10px;
 }
 
 
-.popup-contact {display: none ;
+
+
+.popup-contact {display: none;
   position:fixed;
   left:50%;
   margin-left:-280px;
   top:275px;
+
   width:450px;
   height:350px;
   background: black url('../img/11.png') no-repeat center ;
@@ -755,9 +758,21 @@ margin-bottom: 10px;
   color:white;
   overflow: hidden;
   text-align: center;
-
+  -webkit-animation: bounceInLeft 1.22s;
+  animation: bounceInLeft 1.22s;
   }
 
+  .back-popup {display: none;
+  width:100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 100;
+
+  }
 
   #to-top
   {font-size: 0;
@@ -789,8 +804,7 @@ margin-bottom: 10px;
 
 .popup-contact-show {
   display:block;
-  -webkit-animation: bounceInLeft 1.22s;
-  animation: bounceInLeft 1.22s;
+
 }
 
 
